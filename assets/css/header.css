@@ -1,0 +1,46 @@
+header {
+    background: black;
+    padding: 20px 0;
+}
+
+.caixa {   
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    top: 30%; /* você pode ajustar essa propriedade para alinhar conforme necessário */
+    right: 0;
+}
+
+nav ul {
+    list-style: none; /* Remove as bolinhas da lista */
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline; /* Itens em linha */
+    margin: 0 15px; /* Espaço entre os itens */
+}
+
+nav a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+nav a:hover {
+    color: #C78C19; /* Cor ao passar o mouse */
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
+/* Estilo para o item ativo (página atual) */
+nav a.active {
+    color: #C78C19; /* Cor do item ativo */
+    text-decoration: underline; /* Sublinhado para o ativo */
+}
