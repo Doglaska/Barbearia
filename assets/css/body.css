@@ -1,8 +1,28 @@
+/* Garante que o body ocupe a altura total da tela */
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
 
-.logoImg{
+.logoImg {
     width: 10%;
+    margin-left: 0;
 }
 
+/* Main ocupa todo o espaço disponível */
+.content-wrap {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Footer sempre na parte inferior */
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #333;
+    color: #fff;
+}

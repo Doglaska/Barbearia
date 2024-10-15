@@ -93,7 +93,7 @@ body {
     text-align: center;
     font-size: 20px;
 }
-
+  
 .mapa-conteudo {
     width: 600px;
     margin: 0 auto;
@@ -135,17 +135,28 @@ body {
     margin: 2em auto;
 }
 
-table {
-    align-items: center;
-    margin: 20px 40px;
+/* CSS para alinhar a tabela ao centro */
+.tabela-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Organiza o conteúdo em coluna */
 }
+
+table {
+    margin: 20px 0; /* Espaçamento superior e inferior */
+    border-collapse: collapse; /* Remove espaços entre as bordas */
+}
+
 thead {
     background: #555555;
     color: #FFFFFF;
 }
+
 td, th {
     border: 1px solid #000000;
     padding: 10px 20px;
+    text-align: center; /* Centraliza o texto nas células */
 }
 
 footer {
@@ -154,4 +165,11 @@ footer {
     background-color: #333;
     color: #fff;
 }
+
+p{
+    margin-top: 2%;
+    text-align: center;
+}
+
+
 
