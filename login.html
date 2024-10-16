@@ -1,68 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <title>Login | Bizumic Barber</title>
-        <link rel="stylesheet" href="assets/css/reset.css">
-        <link rel="stylesheet" href="assets/css/header.css">
-        <link rel="stylesheet" href="assets/css/footer.css">
-        <link rel="stylesheet" href="assets/css/login.css">
-        <link rel="stylesheet" href="assets/css/body.css">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    </head>
-    <body class="page-container">
-        <header>
-        <a href="#agendarBtn">Pular para o conteúdo principal</a>
-            <div class="caixa">
-                <img class="logoImg" src="assets/img/logo.png" alt="Logo da Barbearia Bizumic">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <main>
-            <form>
-                <fieldset>
-                    <label for="nome-sobrenome">Nome e Sobrenome</label>
-                    <input type="text" id="nome-sobrenome" class="input-padrao" required>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Bizumic Barber</title>
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/medias.css">
+    <link rel="stylesheet" href="../assets/css/body.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body class="page-container">
+    <header>
+        <div class="caixa">
+            <img class="logoImg" src="../assets/img/logo.png" alt="Logo da Barbearia Bizumic">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-                    <label for="telefone">Telefone</label>
-                    <input type="tel" id="telefone" class="input-padrao" placeholder="(XX) XXXXX-XXXX"required>
-
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" class="input-padrao" placeholder="seuemail@seudomínio.com" required>
-
-                    <label for="mensagem">Mensagem</label>
-                    <textarea cols="75" rows="10" id="mensagem" class="input-padrao" required></textarea>
-                </fieldset>
-
-                <fieldset>    
-                    <legend>Como prefere nosso contato?</legend>
-                    <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">E-mail</label>
+    <main>
+        <form>
+            <h2>Login</h2>
+            <fieldset>
                 
-                    <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked>WhatsApp</label>
-                </fieldset>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" class="input-padrao" placeholder="seuemail@seudomínio.com" required>
 
-                <fieldset>
-                    <legend>Qual horário prefere ser atendido?</legend>
-                    <select>
-                        <option>Manhã</option>
-                        <option>Tarde</option>
-                        <option>Noite</option>
-                    </select>
-                </fieldset>
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" class="input-padrao" placeholder="Digite sua senha" required>
 
-                <label for="checkbox"><input type="checkbox" class="checkbox" checked id="checkbox"> Gostaria de receber nossas novidades por e-mail?</label>
+                <div class="checkbox-container">
+                    <label for="checkbox">
+                        <input type="checkbox" id="checkbox"> Lembrar-me
+                    </label>
+                </div>
 
-                <input type="submit" value="Enviar formulário" class="enviar">
-        </main>
+                <input type="submit" value="Entrar" class="enviar">
+            </fieldset>
+            <div class="cadastro-link">
+                <p>Criar uma conta!<a href="cadastrar.html">Cadastrar</a></p>
+            </div>
+        </form>
+    </main>
 
-        <footer>
-            <img class="logoImg" src="assets/img/logo.png" alt="Logo Bizumic Barber">
-            <p class="Copyright">&copy;Copyright Bizumic Barber  - 2024</p>
-        </footer>
-    </body>
+    <footer>
+        <p class="Copyright">&copy; Copyright Bizumic Barber - 2024</p>
+    </footer>
+</body>
 </html>

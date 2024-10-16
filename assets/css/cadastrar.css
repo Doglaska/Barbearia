@@ -1,0 +1,122 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Adiciona o box-sizing para melhor controle de layout */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Fonte Montserrat */
+    background-color: #f5f5f5; /* Cor de fundo suave */
+}
+
+header {
+    background-color: rgb(33, 30, 29); /* Cor de fundo do cabeçalho */
+    color: white; /* Cor do texto no cabeçalho */
+    padding: 1em 0; /* Padding superior e inferior */
+}
+
+.caixa {
+    max-width: 940px; /* Largura máxima do cabeçalho */
+    margin: 0 auto; /* Centraliza o cabeçalho */
+    display: flex; /* Flexbox para o logo e navegação */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between; /* Espaçamento entre logo e navegação */
+}
+
+.logoImg {
+    width: 100px; /* Largura da imagem do logo */
+}
+
+nav ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+}
+
+nav ul li {
+    display: inline; /* Mostra os itens da lista na horizontal */
+    margin-left: 20px; /* Margem esquerda para espaçamento */
+}
+
+nav a {
+    color: white; /* Cor dos links de navegação */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: bold; /* Deixa os links em negrito */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+main {
+    padding: 20px 0; /* Padding superior e inferior para o conteúdo principal */
+}
+
+.principal {
+    max-width: 600px; /* Largura máxima do formulário */
+    margin: 20px auto; /* Centraliza o formulário */
+    padding: 20px; /* Padding interno do formulário */
+    background: white; /* Fundo branco para o formulário */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para o formulário */
+}
+
+h2 {
+    text-align: center; /* Centraliza o título */
+    font-size: 1.8em; /* Tamanho da fonte do título */
+    margin-bottom: 1em; /* Margem inferior do título */
+}
+
+label {
+    font-size: 16px; /* Tamanho da fonte das labels */
+    margin-bottom: 5px; /* Margem inferior das labels */
+}
+
+.input-padrao {
+    width: 100%; /* Largura total dos inputs */
+    padding: 10px; /* Padding interno */
+    margin: 10px 0; /* Margem acima e abaixo */
+    border: 1px solid #ccc; /* Borda padrão */
+    border-radius: 4px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte dos inputs */
+    transition: border-color 0.3s; /* Transição suave para a borda */
+}
+
+.input-padrao:focus {
+    border-color: #e76937; /* Cor da borda ao focar */
+    outline: none; /* Remove o contorno padrão */
+}
+
+.enviar {
+    width: 100%; /* Largura total do botão */
+    padding: 15px; /* Padding interno do botão */
+    background-color: #e76937; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 18px; /* Tamanho da fonte do botão */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+    transition: background 0.3s, transform 0.3s; /* Transições suaves */
+    margin-top: 20px;
+}
+
+.enviar:hover {
+    background-color: #de4c12; /* Cor do botão ao passar o mouse */
+    transform: scale(1.05); /* Aumenta o botão levemente */
+}
+
+.cadastro-link {
+    text-align: center; /* Centraliza o link de cadastro */
+    margin-top: 20px; /* Margem superior */
+}
+
+footer {
+    text-align: center; /* Centraliza o conteúdo do footer */
+    padding: 1em 0; /* Padding para o footer */
+    background-color: #333; /* Cor de fundo do footer */
+    color: white; /* Cor do texto no footer */
+    margin-top: 20px; /* Margem superior para espaçamento */
+}
+
+.Copyright {
+    font-size: 14px; /* Tamanho da fonte do copyright */
+}

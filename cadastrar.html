@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Bizumic Barber</title>
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/medias.css">
+    <link rel="stylesheet" href="../assets/css/body.css">
+    <link rel="stylesheet" href="../assets/css/cadastrar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body class="page-container">
+    <header>
+        <div class="caixa">
+            <img class="logoImg" src="../assets/img/logo.png" alt="Logo da Barbearia Bizumic">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="principal">
+            <h2>Formulário de Cadastro</h2>
+            <form action="#" method="post"> <!-- Adicione a URL do seu backend na action -->
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" class="input-padrao" placeholder="Kauan" required>
+        
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" id="sobrenome" class="input-padrao" placeholder="Pires" required>
+        
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" class="input-padrao" placeholder="000.000.000-00" required>
+
+                <label for="data-nascimento">Data de Nascimento:</label>
+                <input type="date" id="data-nascimento" class="input-padrao" required>
+                
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" class="input-padrao" placeholder="(00) 00000-0000" required>
+        
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" class="input-padrao" placeholder="Crie uma senha" required>
+        
+                <button type="submit" class="enviar">Cadastrar</button>
+            </form>
+        
+            <p class="cadastro-link">Já tem uma conta? <a href="login.html">Fazer login</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <p class="Copyright">&copy; Copyright Bizumic Barber - 2024</p>
+    </footer>
+</body>
+</html>
