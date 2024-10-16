@@ -1,0 +1,167 @@
+/* Aplicar apenas a âncoras específicas (por exemplo, "pular para o conteúdo") */
+header a[href="#agendarBtn"] {
+    color: transparent;
+    left: -100000px;
+}
+
+/* Barra de progresso */
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+    padding: 10px 0;
+    width: 80%;
+}
+
+.progress-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+    color: rgb(240, 229, 225);
+    padding-bottom: 10px;
+}
+
+.progress-step::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #ddd;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: -1;
+}
+
+.progress-step.active {
+    color: #C78C19; /* Cor ativa */
+}
+
+.progress-step.active::after {
+    background-color: #C78C19; /* Cor ativa do fundo */
+}
+
+.progress-step:first-child::after {
+    width: 50%;
+    left: 50%;
+}
+
+.progress-step:last-child::after {
+    width: 50%;
+    left: 0;
+}
+
+/* Listagem dos serviços */
+.lista-servicos {
+    max-width: 940px; /* Largura máxima */
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.lista-servicos h1 {
+    margin: 10px 0;
+    font-size: 2em; /* Tamanho do título */
+}
+
+/* Estilização dos cartões de serviço */
+.list-group-item {
+    display: flex; /* Ativa o Flexbox para itens de serviço */
+    align-items: center; /* Centraliza os itens verticalmente */
+    justify-content: space-between; /* Espaça os itens igualmente */
+    padding: 20px; /* Espaçamento interno */
+    border: 2px solid #000000;
+    border-radius: 10px;
+    background-color: #9a9796; /* Cor de fundo dos cartões */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    margin-bottom: 15px; /* Margem entre os cartões */
+    transition: transform 0.2s, box-shadow 0.2s; /* Transição suave */
+}
+
+/* Estilização da descrição do serviço */
+.service-description{
+    flex-grow: 1; /* Permite que a descrição ocupe o espaço restante */
+}
+
+/* Estilização dos checkboxes */
+input[type="checkbox"] {
+    display: none; /* Oculta o checkbox padrão */
+}
+
+input[type="checkbox"] + label {
+    display: flex; /* Usar flexbox para o layout */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #f0f0f0; /* Cor de fundo */
+    color: #C78C19;
+    border: 2px solid #C78C19;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; box-shadow: 0.3s;/* Transição suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Sombra quando marcado */
+}
+
+input[type="checkbox"]:checked + label:hover {
+    background-color: #d9d9d9; /* Cor de fundo ao passar o mouse */
+}
+
+input[type="checkbox"]:checked + label {
+    background-color: #C78C19; /* Cor de fundo quando selecionado */
+    color: white; /* Texto em branco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra quando marcado */
+}
+
+/* Estilização do botão próximo */
+.wrap-button-proximo {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-proximo {
+    background-color: #C78C19; /* Cor do botão */
+    color: #fff; /* Texto do botão */
+    border: none; /* Sem borda */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+.btn-proximo:hover {
+    background-color: #b57b14; /* Cor do botão ao passar o mouse */
+}
+
+/* Estilização do rodapé */
+footer {
+    background-color: #C78C19; /* Cor de fundo do rodapé */
+    color: #fff; /* Texto branco */
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Centralizar a div que contém o botão */
+.btn-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    margin-top: 30px; /* Margem superior opcional */
+    height: 100px; /* Definir altura, se necessário, para centralização mais precisa */
+}
+
+/* Estilo do botão "Avançar" */
+.btn-avancar {
+    background-color: #C78C19;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-avancar:hover {
+    background-color: #b57b14;
+}

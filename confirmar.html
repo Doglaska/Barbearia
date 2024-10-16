@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Profissional | Bizumic Barber</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/confirmar.css" />
+    <link rel="stylesheet" href="assets/css/medias.css" />
+    <link rel="stylesheet" href="assets/css/body.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+</head>
+<body class="page-container">
+    <header>
+        <a href="#agendarBtn">Pular para o conteúdo principal</a>
+        <div class="caixa">
+            <img class="logoImg" src="assets/img/logo.png" alt="Logo da Barbearia Bizumic" />
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="progress-container">
+            <div class="progress-step">1. Profissional</div>
+            <div class="progress-step">2. Serviço</div>
+            <div class="progress-step">3. Horário</div>
+            <div class="progress-step active">4. Confirmar</div>
+        </div>
+    </header>
+    
+    <main class="content-wrap">
+        <h1>Confirme aqui</h1>
+
+        <form>
+            <fieldset>
+                <label for="nome-sobrenome">Nome e Sobrenome</label>
+                <input type="text" id="nome-sobrenome" class="input-padrao" required>
+
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" class="input-padrao" placeholder="(XX) XXXXX-XXXX" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" class="input-padrao" placeholder="seuemail@seudomínio.com" required>
+
+                <label for="mensagem">Mensagem</label>
+                <textarea cols="75" rows="10" id="mensagem" class="input-padrao" required></textarea>
+            </fieldset>
+
+            <label for="checkbox">
+                <input type="checkbox" class="checkbox" checked id="checkbox">
+                Gostaria de receber nossas novidades por e-mail?
+            </label>
+        </form>
+
+        <h1>Revise o agendamento</h1>
+        <form action="revisao" method="POST">
+            <div class="card">
+                <span class="text-muted">Data e Hora:</span>
+                <p>Qua, 16/10/2024 às 10:45</p>
+                <hr>
+                <span class="text-muted">Serviços:</span>
+                <div class="servicos">
+                    <div class="d-flex justify-content-between">
+                        <span>Barba Completa</span><span>R$ 35,00</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between">
+                        <span>Corte de Cabelo</span><span>R$ 40,00</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between">
+                        <span class="text-bold">Total</span><span class="text-bold">R$ 75,00</span>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="Agendar" class="enviar">
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Bizumic Barber. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

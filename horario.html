@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agendar Horário | Bizumic Barber</title>
+
+    <!-- Links de CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/horario.css" />
+    <link rel="stylesheet" href="assets/css/medias.css" />
+    <link rel="stylesheet" href="assets/css/body.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+  </head>
+
+  <body class="page-container">
+    <header>
+      <a href="#agendarBtn">Pular para o conteúdo principal</a>
+      <div class="caixa">
+        <img class="logoImg" src="assets/img/logo.png" alt="Logo da Barbearia Bizumic" />
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Barra de progresso -->
+      <div class="progress-container">
+        <div class="progress-step">1. Profissional</div>
+        <div class="progress-step">2. Serviço</div>
+        <div class="progress-step active">3. Horário</div>
+        <div class="progress-step">4. Confirmar</div>
+      </div>
+    </header>
+
+    <main class="agendamento-container">
+      <h1>Agende seu Horário</h1>
+
+      <form action="confirmar.html" method="POST" class="form-agendamento">
+        <div class="form-group">
+          <label for="data">Selecione a Data:</label>
+          <input type="date" id="data" name="data" required />
+        </div>
+
+        <div class="form-group">
+          <label for="hora">Selecione o Horário:</label>
+          <select id="hora" name="hora" required>
+            <!-- As opções serão preenchidas dinamicamente pelo JavaScript -->
+          </select>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn-agendar">Agendar Serviço</button>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <p>&copy; 2024 Bizumic Barber. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/horario.js"></script>
+  </body>
+</html>

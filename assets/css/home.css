@@ -12,7 +12,7 @@ body {
 
 #agendarBtn {
     display: inline-block; /* Permite definir largura e altura */
-    background-color: #28a745; /* Verde para um botão de ação */
+    background-color: #e76937; /* Verde para um botão de ação */
     color: white; /* Texto branco */
     padding: 12px 24px; /* Espaçamento interno: 12px em cima e embaixo, 24px nas laterais */
     border: none; /* Remove a borda padrão */
@@ -28,7 +28,7 @@ body {
 }
 
 #agendarBtn:hover {
-    background-color: #218838; /* Cor mais escura ao passar o mouse */
+    background-color: #de4c12fe; /* Cor mais escura ao passar o mouse */
     transform: scale(1.05); /* Leve aumento ao passar o mouse */
 }
 

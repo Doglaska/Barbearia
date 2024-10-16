@@ -1,20 +1,71 @@
-header, a {
+/* Aplicar apenas a âncoras específicas (por exemplo, "pular para o conteúdo") */
+header a[href="#agendarBtn"] {
     color: transparent;
     left: -100000px;
 }
 
-.produtos {
+/* Barra de progresso */
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+    padding: 10px 0;
+    width: 80%;
+}
+
+.progress-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+    color: rgb(240, 229, 225);
+    padding-bottom: 10px;
+}
+
+.progress-step::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #ddd;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: -1;
+}
+
+.progress-step.active {
+    color: #C78C19;
+}
+
+.progress-step.active::after {
+    background-color: #C78C19;
+}
+
+.progress-step:first-child::after {
+    width: 50%;
+    left: 50%;
+}
+
+.progress-step:last-child::after {
+    width: 50%;
+    left: 0;
+}
+
+/* Listagem dos profissionais */
+.profissionais {
     width: 940px;
     margin: 0 auto;
     padding: 50px 0;
 }
 
-.produtos h1 {
-    font-size: 25px;
-    font-weight: bold;
+/* Ajuste para o título */
+.profissionais h1 {
+    margin: 10px 0;
+    font-size: 1.5em;
 }
 
-.produtos li {
+.profissionais li {
     display: inline-block;
     text-align: center;
     width: 30%;
@@ -24,28 +75,51 @@ header, a {
     box-sizing: border-box;
     border: 2px solid #000000;
     border-radius: 10px;
+    height: 350px; /* Garantir altura fixa para as caixas */
+    background-color: rgb(246, 223, 214); /* Cor de fundo branca */
+    border: 1px solid rgb(65, 50, 45); /* Borda leve para destaque */
+    box-shadow: 0 4px 6px rgba(0, 0, 1, 0.5); /* Sombra leve inicial */
+    transition: transform 0.2s, box-shadow 0.2s; /* Transição suave para hover */
 }
 
-.produtos li:hover {
-    border-color:#C78C19;
-    border-width: 4px;
+.profissionais li h1 {
+    margin: 10px 0;
 }
 
-.produtos li:active {
+/* Efeito no hover */
+.profissionais li:hover {
+    transform: scale(1.05); /* Aumenta levemente o card */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+    border-color: #C78C19; /* Muda a cor da borda no hover */
+    border-width: 2px;
+    background-color: rgb(219, 165, 144);
+}
+
+.profissionais li:active {
     border-color: #CCCCCC;
 }
 
-.produtos li:hover h1 {
+.profissionais li:hover h1 {
     font-size: 30px;
 }
 
-.produto-descricao {
-    font-size: 17px;
+/* Restabelecer cor das âncoras internas, como nas listas de profissionais */
+.profissionais a {
+    color: inherit; /* Herda a cor padrão do pai */
+    text-decoration: none; /* Remove sublinhado */
 }
 
-.produtos-preco {
-    font-size: 22px;
+.profissionais a h1 {
+    font-size: 25px;
     font-weight: bold;
-    margin-top: 10px;
+    color: #000; /* Cor visível */
+}
+
+.profissionais img {
+    width: 100%; /* A imagem ocupará toda a largura disponível */
+    height: 200px; /* Defina uma altura fixa */
+    object-fit: cover; /* Garante que a imagem seja cortada proporcionalmente para preencher o espaço */
+    border-radius: 10px; /* Bordas arredondadas para um efeito elegante */
+    border-color: rgb(21, 11, 8);
 }
 
