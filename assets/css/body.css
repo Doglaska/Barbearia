@@ -7,11 +7,6 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.logoImg {
-    width: 10%;
-    margin-left: 0;
-}
-
 /* Main ocupa todo o espaço disponível */
 .content-wrap {
     flex: 1;

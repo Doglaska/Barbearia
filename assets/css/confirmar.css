@@ -1,88 +1,11 @@
-/* Estilo geral */
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-}
-
-.content-wrap {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #444;
-}
-
-/* Estilo dos campos */
-.input-padrao,
-textarea,
-select {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    margin-top: 5px;
-}
-
-.input-padrao:focus,
-textarea:focus,
-select:focus {
-    border-color: #C78C19;
-    outline: none;
-    box-shadow: 0 0 5px rgba(199, 140, 25, 0.5);
-}
-
-/* Botão de envio */
-.enviar {
-    background-color: #C78C19;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-    margin-top: 15px;
-}
-
-.enviar:hover {
-    background-color: #b57b14;
-}
-
-/* Cartão de revisão */
-.card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-top: 20px;
-}
-
-.d-flex {
-    display: flex;
-    justify-content: space-between;
-}
-
-.text-bold {
-    font-weight: bold;
-}
 
 /* Barra de progresso */
 .progress-container {
     display: flex;
     justify-content: space-between;
     margin: 30px auto;
-    width: 80%;
     padding: 10px 0;
+    width: 80%;
 }
 
 .progress-step {
@@ -91,6 +14,7 @@ select:focus {
     position: relative;
     font-weight: bold;
     color: rgb(240, 229, 225);
+    padding-bottom: 10px;
 }
 
 .progress-step::after {
@@ -106,11 +30,11 @@ select:focus {
 }
 
 .progress-step.active {
-    color: #C78C19;
+    color: #C78C19; /* Cor ativa */
 }
 
 .progress-step.active::after {
-    background-color: #C78C19;
+    background-color: #C78C19; /* Cor ativa do fundo */
 }
 
 .progress-step:first-child::after {
@@ -123,10 +47,103 @@ select:focus {
     left: 0;
 }
 
-/* Rodapé */
-footer {
-    background-color: #C78C19;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
+/* Estilo para o container principal */
+.content-wrap {
+    padding: 20px; /* Espaçamento interno */
+    display: flex;
+    flex-direction: column; /* Alinha itens verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+/* Estilo para o título */
+h1 {
+    font-size: 2.5em; /* Aumenta o tamanho da fonte do título */
+    margin-bottom: 20px; /* Margem abaixo do título */
+    text-align: center; /* Centraliza o título */
+    color: #C78C19; /* Cor do texto */
+}
+
+/* Estilo para o resumo do agendamento */
+.resumo-agendamento {
+    background-color: #f9f9f9; /* Cor de fundo */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra */
+    margin-bottom: 20px; /* Margem abaixo do resumo */
+    width: 100%; /* Para ocupar a largura disponível */
+    max-width: 400px; /* Largura máxima para o resumo */
+}
+
+/* Estilo para a caixa do formulário */
+.form-container {
+    background-color: #f9f9f9; /* Cor de fundo da caixa */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra */
+    margin-bottom: 20px; /* Margem abaixo da caixa do formulário */
+    width: 100%; /* Para ocupar a largura disponível */
+    max-width: 400px; /* Largura máxima para a caixa do formulário */
+    margin-top: 20px;
+}
+
+/* Estilo para o título da caixa do formulário */
+.form-container h2 {
+    font-size: 2em; /* Tamanho da fonte do título */
+    color: #C78C19; /* Cor do título */
+    margin-bottom: 20px; /* Margem abaixo do título */
+    text-align: center; /* Centraliza o título */
+}
+
+/* Estilo para os grupos de formulários */
+.form-group {
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    margin: 15px 0; /* Margens acima e abaixo dos grupos */
+    width: 100%; /* Para que os campos ocupem toda a largura */
+}
+
+/* Estilo para os rótulos */
+label {
+    font-size: 1.5em; /* Aumenta o tamanho da fonte do rótulo */
+    margin-bottom: 5px; /* Margem abaixo do rótulo */
+    color: #C78C19; /* Cor do texto */
+}
+
+/* Estilo para os campos de entrada */
+input[type="text"],
+input[type="tel"],
+input[type="date"] {
+    padding: 10px; /* Espaçamento interno */
+    font-size: 1.2em; /* Aumenta o tamanho da fonte dos inputs */
+    border: 2px solid #C78C19; /* Borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    width: 100%; /* Ocupa toda a largura disponível */
+    box-sizing: border-box; /* Inclui o padding e a borda no tamanho total */
+}
+
+/* Estilo para o container do botão */
+.btn-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    margin-top: 20px; /* Margem acima do botão */
+}
+
+/* Estilo do botão "Confirmar Agendamento" */
+.btn-confirmar {
+    background-color: #e76937; /* Cor do botão */
+    color: #fff; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 15px 30px; /* Aumenta o espaçamento interno */
+    font-size: 1.2em; /* Aumenta o tamanho da fonte do botão */
+    border-radius: 5px; /* Mantém o arredondamento */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: background-color 0.3s; /* Transição suave */
+    margin-bottom: 20px;
+    box-shadow:  0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.btn-confirmar:hover {
+    background-color: #de4c12fe; /* Cor do botão ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Sombra mais forte ao passar o mouse */
 }

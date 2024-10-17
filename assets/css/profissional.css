@@ -1,9 +1,3 @@
-/* Aplicar apenas a âncoras específicas (por exemplo, "pular para o conteúdo") */
-header a[href="#agendarBtn"] {
-    color: transparent;
-    left: -100000px;
-}
-
 /* Barra de progresso */
 .progress-container {
     display: flex;
@@ -123,3 +117,11 @@ header a[href="#agendarBtn"] {
     border-color: rgb(21, 11, 8);
 }
 
+.content-wrap h1 {
+    text-align: center; /* Centraliza o texto */
+    font-size: 2.5em; /* Aumenta o tamanho da fonte */
+    color: #333; /* Define a cor do texto */
+    margin: 20px 0; /* Adiciona espaço acima e abaixo do título */
+    font-weight: bold; /* Torna o texto em negrito */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+}

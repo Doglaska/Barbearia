@@ -4,6 +4,17 @@ body {
     padding: 0;
 }
 
+.banner {
+    width: 100%; /* Ocupa toda a largura da tela */
+    height: 50vh; /* Altura máxima de 50% da altura da tela */
+    margin: 0; /* Remove margens */
+    display: flex; /* Ativa o Flexbox */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    text-align: center; /* Centraliza o texto dentro do banner */
+    background-color: #e76937; /* Cor de fundo do banner (opcional) */
+}
+
 .botao-container {
     display: flex; /* Ativa o Flexbox */
     justify-content: center; /* Centraliza horizontalmente */
@@ -14,7 +25,7 @@ body {
     display: inline-block; /* Permite definir largura e altura */
     background-color: #e76937; /* Verde para um botão de ação */
     color: white; /* Texto branco */
-    padding: 12px 24px; /* Espaçamento interno: 12px em cima e embaixo, 24px nas laterais */
+    padding: 18px 30px; /* Espaçamento interno: 12px em cima e embaixo, 24px nas laterais */
     border: none; /* Remove a borda padrão */
     border-radius: 5px; /* Bordas arredondadas */
     font-size: 16px; /* Tamanho da fonte */

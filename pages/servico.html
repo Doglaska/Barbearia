@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Profissional | Bizumic Barber</title>
+    <title>Serviços | Bizumic Barber</title>
     <link rel="stylesheet" href="../assets/css/reset.css" />
     <link rel="stylesheet" href="../assets/css/header.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
@@ -22,9 +22,8 @@
                 </ul>
             </nav>
         </div>
-        <!-- Linha de Status -->
         <div class="progress-container">
-            <div class="progress-step">1. Profissional</div>
+            <div class="progress-step active">1. Profissional</div>
             <div class="progress-step active">2. Serviço</div>
             <div class="progress-step">3. Horário</div>
             <div class="progress-step">4. Confirmar</div>
@@ -69,29 +68,42 @@
                             <label for="corte-cabelo-sobrancelha">Selecionar</label>
                         </div>
                         <div class="list-group-item">
-                          <div class="service-description">
-                              <span class="service-title">Corte de Cabelo zero</span>
-                              <div class="value">R$ 25,00</div>
-                          </div>
-                          <input type="checkbox" id="corte-cabelo-zero" name="servico" value="corte-cabelo-zero">
-                          <label for="corte-cabelo-zero">Selecionar</label>
-                      </div>
+                            <div class="service-description">
+                                <span class="service-title">Corte de Cabelo zero</span>
+                                <div class="value">R$ 25,00</div>
+                            </div>
+                            <input type="checkbox" id="corte-cabelo-zero" name="servico" value="corte-cabelo-zero">
+                            <label for="corte-cabelo-zero">Selecionar</label>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-<div class="btn-container">
-  <a href="horario.html"><button class="btn-avancar">Avançar</button>
-  </a>
-</div>
+        <div class="btn-container">
+            <a href="horario.html"><button class="btn-avancar">Avançar</button></a>
+        </div>
     </main>
     <footer>
         <div class="footer-container">
             <p>&copy; 2024 Bizumic Barber. Todos os direitos reservados.</p>
         </div>
     </footer>
-    <script src="assets/js/script.js"></script>
+    <script>
+        document.querySelector('.btn-avancar').addEventListener('click', function() {
+            const profissional = localStorage.getItem('profissional') || 'Nome do Profissional';
+            localStorage.setItem('profissional', profissional);
+
+            const servicosSelecionados = [];
+            const checkboxes = document.querySelectorAll('input[name="servico"]:checked');
+            checkboxes.forEach(checkbox => {
+                const serviceItem = checkbox.closest('.list-group-item');
+                const nomeServico = serviceItem.querySelector('.service-title').textContent;
+                const precoServico = parseFloat(serviceItem.querySelector('.value').textContent.replace('R$', '').replace(',', '.').trim()); // Remove 'R$' e converte para número
+
+                servicosSelecionados.push({ nome: nomeServico, preco: precoServico }); // Armazena como objeto
+            });
+            localStorage.setItem('servicosSelecionados', JSON.stringify(servicosSelecionados));
+        });
+    </script>
 </body>
 </html>
-
-

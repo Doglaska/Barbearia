@@ -1,7 +1,9 @@
-/* Aplicar apenas a âncoras específicas (por exemplo, "pular para o conteúdo") */
-header a[href="#agendarBtn"] {
-    color: transparent;
-    left: -100000px;
+/* Estilo Global */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
 }
 
 /* Barra de progresso */
@@ -52,13 +54,7 @@ header a[href="#agendarBtn"] {
     left: 0;
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-}
-
+/* Container do Agendamento */
 .agendamento-container {
     max-width: 600px;
     margin: 50px auto;
@@ -68,43 +64,52 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Títulos */
 h1 {
     text-align: center;
     margin-bottom: 20px;
     color: #444;
+    font-size: 2.5em; /* Aumenta o tamanho do título */
 }
 
-.form-agendamento {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+/* Estilo para os grupos de formulários */
+.form-group {
+    display: flex; /* Usar flexbox para alinhar rótulo e input */
+    flex-direction: column; /* Alinha os itens verticalmente */
+    margin: 10px 0; /* Margens acima e abaixo dos grupos */
+    width: 100%; /* Para que os campos ocupem toda a largura */
 }
 
+/* Estilo para os grupos de formulários */
 .form-group {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    margin: 10px 0; /* Margens acima e abaixo dos grupos */
 }
 
-label {
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #333;
-}
-
+/* Estilo para os campos de entrada */
+input[type="text"],
+input[type="tel"],
 input[type="date"],
-select {
-    padding: 12px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
+input[type="time"] { /* Adiciona o campo de horário aqui */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 1.2em; /* Aumenta o tamanho da fonte dos inputs */
+    border: 2px solid #C78C19; /* Borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    width: 100%; /* Ocupa toda a largura disponível */
+    box-sizing: border-box; /* Inclui o padding e a borda no tamanho total */
 }
 
+/* Estilo para campos de data e hora ao focar */
 input[type="date"]:focus,
+input[type="time"]:focus, /* Adiciona o campo de horário aqui */
 select:focus {
-    border-color: #C78C19;
-    outline: none;
+    border-color: #C78C19; /* Cor da borda ao focar */
+    outline: none; /* Remove o contorno padrão */
 }
 
+
+/* Botão Agendar */
 .btn-agendar {
     background-color: #C78C19;
     color: white;
@@ -117,9 +122,10 @@ select:focus {
 }
 
 .btn-agendar:hover {
-    background-color: #b57b14;
+    background-color: #b57b14; /* Cor do botão ao passar o mouse */
 }
 
+/* Footer */
 footer {
     text-align: center;
     background-color: #C78C19;
@@ -128,4 +134,62 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* Estilo para o contêiner de formulários */
+.form-container {
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Alinha os campos verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #f9f9f9; /* Cor de fundo */
+    padding: 20px; /* Ajuste no espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra */
+    width: 100%; /* Para ocupar a largura disponível */
+    max-width: 480px; /* Ajustar largura máxima do contêiner do formulário */
+    margin: 0 auto; /* Centraliza o contêiner do formulário */
+}
+
+/* Estilo para os rótulos */
+label {
+    font-size: 1.6em; /* Aumenta o tamanho da fonte do rótulo */
+    margin-bottom: 8px; /* Margem abaixo do rótulo */
+    color: #C78C19; /* Cor do texto */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+
+/* Estilo para o título da caixa do formulário */
+.form-container h2 {
+    font-size: 2em; /* Tamanho da fonte do título */
+    color: #C78C19; /* Cor do título */
+    margin-bottom: 20px; /* Margem abaixo do título */
+    text-align: center; /* Centraliza o título */
+}
+
+/* Estilo para o container do botão */
+.btn-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    margin-top: 20px; /* Margem acima do botão */
+}
+
+/* Estilo do botão "Avançar" */
+.btn-avancar {
+    background-color: #e76937; /* Cor do botão */
+    color: #fff; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 15px 30px; /* Aumenta o espaçamento interno */
+    font-size: 1.2em; /* Aumenta o tamanho da fonte do botão */
+    border-radius: 5px; /* Mantém o arredondamento */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: background-color 0.3s; /* Transição suave */
+    box-shadow:  0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.btn-avancar:hover {
+    background-color: #de4c12fe; /* Cor do botão ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Sombra mais forte ao passar o mouse */
 }

@@ -44,3 +44,22 @@ nav a.active {
     color: #C78C19; /* Cor do item ativo */
     text-decoration: underline; /* Sublinhado para o ativo */
 }
+
+.logoImg {
+    width: 10%; /* Define a largura do logo como 10% da largura do container */
+    max-width: 120px; /* Define uma largura máxima para evitar que fique muito grande */
+    margin-left: -200px; /* Ajuste conforme necessário */
+}
+
+@media (max-width: 768px) { /* Para telas menores que 768px */
+    .logoImg {
+        width: 20%; /* Aumenta a largura do logo para 20% em telas pequenas */
+        margin-left: 0; /* Redefine a margem esquerda se necessário */
+    }
+}
+
+@media (max-width: 480px) { /* Para telas muito pequenas, como smartphones */
+    .logoImg {
+        width: 30%; /* Aumenta ainda mais a largura do logo */
+    }
+}
